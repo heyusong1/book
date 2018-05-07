@@ -70,7 +70,7 @@
 		</div><div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
 		<div class="register w3layouts agileits">
 			<h2>注 册</h2>
-			
+			<form action="add_user" method="post">
 				<input type="text" Name="admin_user_name" placeholder="用户名" required="">
 				<font style="position: absolute; right: 380px; top: 290px; color: #999" class="name_info"></font>
 				<input type="password" Name="admin_user_pwd" placeholder="密码" required="">
@@ -85,6 +85,7 @@
 					<input type="submit" value="免费注册">
 				</form>
 			</div>
+			</form>
 			<div class="clear"></div>
 		</div>
 

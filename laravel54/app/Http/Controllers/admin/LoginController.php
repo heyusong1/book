@@ -42,6 +42,10 @@ class LoginController extends Controller
         }
    		
    }
+   public function add_user()
+   {
+      echo 111;die;
+   }
    public function telcode($tel,$code)
    {
    		$account  = "C69436975";
