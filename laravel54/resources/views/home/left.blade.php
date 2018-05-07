@@ -26,12 +26,16 @@ body{overflow-x:hidden; background:url({{ asset('home/images/main/leftbg.jpg') }
 </div>
     <div style="float: left" id="my_menu" class="sdmenu">
       <div class="collapsed">
-        <span>系统设置</span>
-        <a href="main.html" target="mainFrame" onFocus="this.blur()">后台首页</a>
-        <a href="main_list.html" target="mainFrame" onFocus="this.blur()">列表页</a>
-        <a href="main_info.html" target="mainFrame" onFocus="this.blur()">列表详细页</a>
-        <a href="main_message.html" target="mainFrame" onFocus="this.blur()">留言页</a>
-        <a href="main_menu.html" target="mainFrame" onFocus="this.blur()">栏目管理</a>
+        <span>管理员设置</span>
+        <a href="home_change_password" target="mainFrame" onFocus="this.blur()">修改密码</a>
+        <a href="home_insert_admin" target="mainFrame" onFocus="this.blur()">新添管理员</a>
+        <a href="home_show_admin" target="mainFrame" onFocus="this.blur()">管理员编辑</a>
+      </div>
+      <div>
+        <span>用户设置</span>
+        <a href="main.html" target="mainFrame" onFocus="this.blur()">添加用户</a>
+        <a href="main_info.html" target="mainFrame" onFocus="this.blur()">用户展示</a>
+        <a href="main.html" target="mainFrame" onFocus="this.blur()">用户编辑</a>
       </div>
       <div>
         <span>系统设置</span>
@@ -40,19 +44,9 @@ body{overflow-x:hidden; background:url({{ asset('home/images/main/leftbg.jpg') }
         <a href="main_info.html" target="mainFrame" onFocus="this.blur()">角色管理</a>
         <a href="main.html" target="mainFrame" onFocus="this.blur()">自定义权限</a>
       </div>
-      <div>
+       <div>
         <span>系统设置</span>
-        <a href="main.html" target="mainFrame" onFocus="this.blur()">分组权限</a>
         <a href="main_list.html" target="mainFrame" onFocus="this.blur()">级别权限</a>
-        <a href="main_info.html" target="mainFrame" onFocus="this.blur()">角色管理</a>
-        <a href="main.html" target="mainFrame" onFocus="this.blur()">自定义权限</a>
-      </div>
-      <div>
-        <span>系统设置</span>
-        <a href="main.html" target="mainFrame" onFocus="this.blur()">分组权限</a>
-        <a href="main_list.html" target="mainFrame" onFocus="this.blur()">级别权限</a>
-        <a href="main_info.html" target="mainFrame" onFocus="this.blur()">角色管理</a>
-        <a href="main.html" target="mainFrame" onFocus="this.blur()">自定义权限</a>
       </div>
     </div>
 </body>
