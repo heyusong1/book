@@ -41,19 +41,92 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr>
         <th align="center" valign="middle" class="borderright">编号</th>
-        <th align="center" valign="middle" class="borderright">管理员名称</th>
-  		<th align="center" valign="middle" class="borderright">管理员分类</th>
+        <th align="center" valign="middle" class="borderright">留言类型</th>
+  		<th align="center" valign="middle" class="borderright">标题</th>
+        <th align="center" valign="middle" class="borderright">邮箱</th>
+        <th align="center" valign="middle" class="borderright">留言时间</th>
         <th align="center" valign="middle">操作</th>
       </tr>
-      @foreach ($data as $k => $v)
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="center" valign="middle" class="borderright borderbottom">{{ $v->home_user_id }}</td>
-        <td align="center" valign="middle" class="borderright borderbottom"><a href="show_user_one" target="mainFrame" onFocus="this.blur()">{{ $v->home_user_name }}</a></td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{ $v->home_user_state }}</td>
-        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
-          <span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">1</td>
+        <td align="center" valign="middle" class="borderright borderbottom">留言测试</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="message_info.html" target="mainFrame" onFocus="this.blur()">留言测试留言测试留言测试留言测试内容</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">admin@sina.com</td>
+        <td align="center" valign="middle" class="borderright borderbottom">2013-04-19 15:35:13</td>
+        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
       </tr>
-      @endforeach
+      <tr class="bggray" onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="center" valign="middle" class="borderright borderbottom">2</td>
+        <td align="center" valign="middle" class="borderright borderbottom">留言测试</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="message_info.html" target="mainFrame" onFocus="this.blur()">留言测试留言测试留言测试留言测试内容</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">admin@sina.com</td>
+        <td align="center" valign="middle" class="borderright borderbottom">2013-04-19 15:35:13</td>
+        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
+      </tr>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="center" valign="middle" class="borderright borderbottom">3</td>
+        <td align="center" valign="middle" class="borderright borderbottom">留言测试</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="message_info.html" target="mainFrame" onFocus="this.blur()">留言测试留言测试留言测试留言测试内容</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">admin@sina.com</td>
+        <td align="center" valign="middle" class="borderright borderbottom">2013-04-19 15:35:13</td>
+        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
+      </tr>
+      <tr class="bggray" onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="center" valign="middle" class="borderright borderbottom">4</td>
+        <td align="center" valign="middle" class="borderright borderbottom">留言测试</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="message_info.html" target="mainFrame" onFocus="this.blur()">留言测试留言测试留言测试留言测试内容</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">admin@sina.com</td>
+        <td align="center" valign="middle" class="borderright borderbottom">2013-04-19 15:35:13</td>
+        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
+      </tr>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="center" valign="middle" class="borderright borderbottom">5</td>
+        <td align="center" valign="middle" class="borderright borderbottom">留言测试</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="message_info.html" target="mainFrame" onFocus="this.blur()">留言测试留言测试留言测试留言测试内容</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">admin@sina.com</td>
+        <td align="center" valign="middle" class="borderright borderbottom">2013-04-19 15:35:13</td>
+        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
+      </tr>
+      <tr class="bggray" onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="center" valign="middle" class="borderright borderbottom">6</td>
+        <td align="center" valign="middle" class="borderright borderbottom">留言测试</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="message_info.html" target="mainFrame" onFocus="this.blur()">留言测试留言测试留言测试留言测试内容</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">admin@sina.com</td>
+        <td align="center" valign="middle" class="borderright borderbottom">2013-04-19 15:35:13</td>
+        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
+      </tr>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="center" valign="middle" class="borderright borderbottom">7</td>
+        <td align="center" valign="middle" class="borderright borderbottom">留言测试</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="message_info.html" target="mainFrame" onFocus="this.blur()">留言测试留言测试留言测试留言测试内容</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">admin@sina.com</td>
+        <td align="center" valign="middle" class="borderright borderbottom">2013-04-19 15:35:13</td>
+        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
+      </tr>
+      <tr class="bggray" onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="center" valign="middle" class="borderright borderbottom">8</td>
+        <td align="center" valign="middle" class="borderright borderbottom">留言测试</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="message_info.html" target="mainFrame" onFocus="this.blur()">留言测试留言测试留言测试留言测试内容</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">admin@sina.com</td>
+        <td align="center" valign="middle" class="borderright borderbottom">2013-04-19 15:35:13</td>
+        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
+      </tr>
+      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="center" valign="middle" class="borderright borderbottom">9</td>
+        <td align="center" valign="middle" class="borderright borderbottom">留言测试</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="message_info.html" target="mainFrame" onFocus="this.blur()">留言测试留言测试留言测试留言测试内容</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">admin@sina.com</td>
+        <td align="center" valign="middle" class="borderright borderbottom">2013-04-19 15:35:13</td>
+        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
+      </tr>
+      <tr class="bggray" onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="center" valign="middle" class="borderright borderbottom">10</td>
+        <td align="center" valign="middle" class="borderright borderbottom">留言测试</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="message_info.html" target="mainFrame" onFocus="this.blur()">留言测试留言测试留言测试留言测试内容</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">admin@sina.com</td>
+        <td align="center" valign="middle" class="borderright borderbottom">2013-04-19 15:35:13</td>
+        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">回复</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">不允许显示</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">查看</a></td>
+      </tr>
     </table></td>
     </tr>
   <tr>
