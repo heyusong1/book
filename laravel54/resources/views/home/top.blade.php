@@ -2,7 +2,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>后台页面头部</title>
-<link href="css/css.css" type="text/css" rel="stylesheet" />
+<link href="{{ asset('home/css/css.css') }}" type="text/css" rel="stylesheet" />
 </head>
 <body onselectstart="return false" oncontextmenu=return(false) style="overflow-x:hidden;">
 <!--禁止网页另存为-->
