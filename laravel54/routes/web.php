@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 
 Route::post('/page', 'PostController@store');
+
 Route::get('reg', 'RegController@index');
 Route::get('/login', 'admin\LoginController@login');
 Route::get('/validation', 'admin\LoginController@validation');
@@ -36,8 +37,5 @@ Route::any('/insert_user_one', 'home\AdminController@insert_user');
 Route::any('/show_user_one', 'home\AdminController@user_show_one');
 Route::any('/update_user_one', 'home\AdminController@user_update_one');
 Route::any('/adminorder', 'admin\OrderController@order');
-Route::any('/user_insert', 'admin\LoginController@insert_user');
-Route::any('/login_user', 'admin\LoginController@login_one');
-
 
 

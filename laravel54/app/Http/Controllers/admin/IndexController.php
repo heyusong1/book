@@ -44,6 +44,7 @@ class IndexController extends Controller
       $data['num_page'] = ceil($data['num']/$size);
       $data['up']       = $page-1<1?$page:$page-1;
       $data['next']     = $page+1>$data['num_page']?$page:$page+1;
+      $data['page']     = $page;
       $book             = $indexmodel->select_book($book_message_name,$book_type_id,$limit,$size);
       
       return view("Login/index",['book_type'=>$book_type,'book'=>$book,"book_message_name"=>$book_message_name,"book_type_id"=>$book_type_id,"data"=>$data]);
