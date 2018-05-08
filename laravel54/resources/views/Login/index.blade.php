@@ -86,7 +86,10 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
         <td align="center" valign="middle" class="borderright borderbottom">{{$v->book_message_buy}}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$v->book_message_loan}}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$v->book_message_num}}</td>
-        <td align="center" valign="middle" class="borderbottom"><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+        @if ($v->book_message_num== 0) <td align="center" valign="middle" class="borderbottom"><a href="adminorder"  onFocus="this.blur()" class="add"><strong style="font-size: 16px; color: red">预约</strong></a><span class="gray">&nbsp;</td>
+        @else
+        <td align="center" valign="middle" class="borderbottom"><a href="add.html"  onFocus="this.blur()" class="add"><strong style="font-size: 16px; color: green">借阅</strong></a><span class="gray">&nbsp;</td>
+        @endif
       </tr>
        @endforeach
     </table></td>

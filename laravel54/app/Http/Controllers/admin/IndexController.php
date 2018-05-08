@@ -19,12 +19,12 @@ class IndexController extends Controller
       $book_type  = $indexmodel->select_booktype();
       $book_type  = json_decode($book_type);
       $book_type  = $this->digui($book_type);
-      $page = Input::get("page","1");
+      $page = Input::get("page",1 );
       $size = 4;
       $limit = ($page-1)*$size;
       //接图书名称
       $book_message_name = Input::get("book_message_name","");
-      //接分类id 
+      //接分类id   
       $book_type_id      = Input::get("book_type_id","");
       //查询图书
       foreach($book_type as $k =>$v)
