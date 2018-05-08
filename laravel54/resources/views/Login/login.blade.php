@@ -118,7 +118,7 @@
             url:"{{url('validation')}}",
             data:{admin_user_tel:admin_user_tel},
             success:function(a){
-
+                alert(a)
                 if(a==1)
                 {
                     $(".phone_info").html("手机号已存在");

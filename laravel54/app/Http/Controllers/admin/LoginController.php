@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Model\LoginModel; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
-
+use Symfony\Component\HttpFoundation\Session\Session;
   
 class LoginController extends Controller  
 {  
@@ -32,12 +32,11 @@ class LoginController extends Controller
    			die;
    		}
    		$code       = rand(1000,9999);
-        $code_state = $this->telcode($tel,$code);//调用短信接口
+      $code_state = $this->telcode($tel,$code);//调用短信接口
 
         if ($code_state->code == 2) {
-
-            session()->put('code',$code);
-//            session::put(['code' => $code]);
+          $session = new Session();
+          $session->set("code",$code);
             echo 3;//发送验证码成功
             exit;
         }else{
@@ -52,8 +51,8 @@ class LoginController extends Controller
    }
    public function telcode($tel,$code)
    {
-   		$account  = "C69436975";
-        $apikey   = "330dcdef0e247a96fc41082cb9551391";
+   		$account  = "C61710692";
+        $apikey   = "a7483d88e73e502b23b64770791bcaba";
         $url      = "http://106.ihuyi.com/webservice/sms.php?method=Submit&account={$account}&password={$apikey}&mobile={$tel}&format=json&content=您的验证码是：{$code}。请不要把验证码泄露给其他人。";
 
         $ch = curl_init();
@@ -73,14 +72,14 @@ class LoginController extends Controller
        $login = new LoginModel();
        $name = $_GET['admin_user_name'];
        $res = $login->select_name("admin_user","admin_user_name",$name);
-       $arr=session()->get('code','123');
-//       echo $arr;die;
-//       print_r(session('code'));die;
+       $session = new Session();
+       $id=$session->get('code');
+
        if($res)
        {
            echo '<script>alert("用户名已存在");location.href="'.'adminindex'.'";</script>';die;
        }
-       if(session('code')!=$data['Phone_Number'])
+       if($id!=$data['Phone_Number'])
        {
            echo '<script>alert("验证码错误");location.href="'.'login'.'";</script>';die;
        }
