@@ -86,7 +86,7 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
         <td align="center" valign="middle" class="borderright borderbottom">{{$v->book_message_buy}}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$v->book_message_loan}}</td>
         <td align="center" valign="middle" class="borderright borderbottom">{{$v->book_message_num}}</td>
-        @if ($v->book_message_num== 0) <td align="center" valign="middle" class="borderbottom"><a href="adminorder?book_message_id=<?= $v->book_message_id?>"  onFocus="this.blur()" class="add"><strong style="font-size: 16px; color: red">预约</strong></a><span class="gray">&nbsp;</td>
+        @if ($v->book_message_num== 0) <td align="center" valign="middle" class="borderbottom"><a href="adminorder"  onFocus="this.blur()" class="add"><strong style="font-size: 16px; color: red">预约</strong></a><span class="gray">&nbsp;</td>
         @else
         <td align="center" valign="middle" class="borderbottom"><a href="add.html"  onFocus="this.blur()" class="add"><strong style="font-size: 16px; color: green">借阅</strong></a><span class="gray">&nbsp;</td>
         @endif
@@ -95,7 +95,7 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
     </table></td>
     </tr>
   <tr>
-    <td align="left" valign="top" class="fenye">{{$data['num']}} 条数据 {{$data['page']}}/{{$data['num_page']}} 页&nbsp;&nbsp;<a href="adminindex?page=1&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >首页</a>&nbsp;&nbsp;<a href="adminindex?page=<?= $data['up']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >上一页</a>&nbsp;&nbsp;<a href="adminindex?page=<?= $data['next']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>">下一页</a>&nbsp;&nbsp;<a href="adminindex?page=<?= $data['num_page']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >尾页</a></td>
+    <td align="left" valign="top" class="fenye">{{$data['num']}} 条数据 1/1 页&nbsp;&nbsp;<a href="adminindex?page=1&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >首页</a>&nbsp;&nbsp;<a href="adminindex?page=<?= $data['up']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >上一页</a>&nbsp;&nbsp;<a href="adminindex?page=<?= $data['next']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>">下一页</a>&nbsp;&nbsp;<a href="adminindex?page=<?= $data['num_page']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >尾页</a></td>
   </tr>
 </table>
 </center>

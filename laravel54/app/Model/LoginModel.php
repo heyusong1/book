@@ -7,6 +7,7 @@ use DB;
 
 class LoginModel extends Model
 {
+    protected $tableName = 'admin_user';
 //展示  
     // public function getlist()
     // {
@@ -16,8 +17,24 @@ class LoginModel extends Model
     public function select_one($table,$where,$data)
     {
         return  DB::table("$table")->where($where,$data)->first();
-         
-    }
 
+    }
+    public function insert($input)
+    {
+        $data['admin_user_name'] = $input['admin_user_name'];
+        $data['admin_user_pwd'] = md5($input['admin_user_pwd']);
+        $data['admin_user_tel'] = $input['admin_user_tel'];
+        return DB::table($this->tableName)->insert($data);
+    }
+    public function login($admin_user_name,$admin_user_pwd)
+    {
+
+        return DB::table($this->tableName)->where('admin_user_name',$admin_user_name)->where("admin_user_pwd",$admin_user_pwd)->first();
+    }
+    public function select_name($table,$where,$data)
+    {
+        return  DB::table("$table")->where($where,$data)->first();
+
+    }
 }
 ?>
