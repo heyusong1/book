@@ -3,12 +3,17 @@
 namespace App\Http\Controllers\home;  
   
 use App\Http\Controllers\Controller; 
-// use App\Model\LoginModel; 
+use App\Model\AdminModel; 
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 
   
 class IndexController extends Controller  
 {  
+    public $Admin;
+    public function __construct(){
+        $this->Admin=new AdminModel();// 实例化model
+    }
 	   public function index()
      {
         return view("home/index");
@@ -19,7 +24,10 @@ class IndexController extends Controller
      }
      public function left()
      {
-        return view("home/left");
+      $Session=new Session();
+      $id=$Session->get('home_user_id');
+      $data=$this->Admin->img($id);
+       return view("home/left",['data'=>$data]);
      }
      public function swich()
      {

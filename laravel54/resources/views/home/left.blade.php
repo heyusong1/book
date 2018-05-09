@@ -21,8 +21,8 @@ body{overflow-x:hidden; background:url({{ asset('home/images/main/leftbg.jpg') }
 </head>
 <body onselectstart="return false;" ondragstart="return false;" oncontextmenu="return false;">
 <div id="left-top">
-	<div><img src="{{ asset('home/images/main/member.gif') }}" width="44" height="44" /></div>
-    <span>用户：admin<br>角色：超级管理员</span>
+	<div><img width="48px;" height="48px;" src="{{$data->home_user_img}}"></div>
+    <span>用户:{{$data->home_user_name}}<br>角色:{{$data->home_user_state}}</span>
 </div>
     <div style="float: left" id="my_menu" class="sdmenu">
       <div class="collapsed">
@@ -33,20 +33,11 @@ body{overflow-x:hidden; background:url({{ asset('home/images/main/leftbg.jpg') }
       </div>
       <div>
         <span>用户设置</span>
-        <a href="main.html" target="mainFrame" onFocus="this.blur()">添加用户</a>
-        <a href="main_info.html" target="mainFrame" onFocus="this.blur()">用户展示</a>
-        <a href="main.html" target="mainFrame" onFocus="this.blur()">用户编辑</a>
-      </div>
-      <div>
-        <span>系统设置</span>
-        <a href="main.html" target="mainFrame" onFocus="this.blur()">分组权限</a>
-        <a href="main_list.html" target="mainFrame" onFocus="this.blur()">级别权限</a>
-        <a href="main_info.html" target="mainFrame" onFocus="this.blur()">角色管理</a>
-        <a href="main.html" target="mainFrame" onFocus="this.blur()">自定义权限</a>
+        <a href="user_one_show" target="mainFrame" onFocus="this.blur()">用户展示</a>
       </div>
        <div>
         <span>系统设置</span>
-        <a href="main_list.html" target="mainFrame" onFocus="this.blur()">级别权限</a>
+        <a href="" target="mainFrame" onFocus="this.blur()">系统配置</a>
       </div>
     </div>
 </body>

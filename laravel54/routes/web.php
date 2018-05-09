@@ -29,6 +29,17 @@ Route::get('/adminindex', 'admin\IndexController@index');
 Route::get('/homemain', 'home\IndexController@main_info');
 Route::get('/homebottom', 'home\IndexController@bottom');
 // Route::get('/homelogin', 'home\IndexController@');
+
+
+
+
+Route::any('/loginone', 'admin\LoginController@homeindex_one');
+Route::any('/change_one', 'home\AdminController@admin_change_pwd');
+Route::any('/user_one_show', 'admin\LoginController@user_show_a');
+Route::any('/login_insert_one', 'admin\LoginController@login_insert');
+Route::any('/updates_one', 'home\AdminController@updates');
+Route::any('/admin_del', 'home\AdminController@admin_delect');
+Route::any('/user_one', 'home\AdminController@user_insert_one');
 Route::any('/home_change_password', 'home\AdminController@admin_change_password');
 Route::any('/home_insert_admin', 'home\AdminController@admin_insert_user');
 Route::any('/home_show_admin', 'home\AdminController@admin_show_user');
@@ -38,6 +49,8 @@ Route::any('/update_user_one', 'home\AdminController@user_update_one');
 Route::any('/adminorder', 'admin\OrderController@order');
 Route::any('/user_insert', 'admin\LoginController@insert_user');
 Route::any('/login_user', 'admin\LoginController@login_one');
+
+
 
 
 

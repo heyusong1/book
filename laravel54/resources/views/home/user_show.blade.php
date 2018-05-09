@@ -41,24 +41,24 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr>
         <th align="center" valign="middle" class="borderright">编号</th>
-        <th align="center" valign="middle" class="borderright">管理员名称</th>
-  		<th align="center" valign="middle" class="borderright">管理员分类</th>
+        <th align="center" valign="middle" class="borderright">用户名称</th>
+      <th align="center" valign="middle" class="borderright">用户手机</th>
         <th align="center" valign="middle">操作</th>
       </tr>
-      @foreach ($data as $k => $v)
+   @foreach ($data as $k => $v)
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="center" valign="middle" class="borderright borderbottom">{{ $v->home_user_id }}</td>
-        <td align="center" valign="middle" class="borderright borderbottom"><a href="updates_one?home_user_id=<?= $v->home_user_id ?>" target="mainFrame" onFocus="this.blur()">{{ $v->home_user_name }}</a></td>
-        <td align="center" valign="middle" class="borderright borderbottom">{{ $v->home_user_state }}</td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{ $v->admin_user_id }}</td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="#" target="mainFrame" onFocus="this.blur()">{{ $v->admin_user_name }}</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{ $v->admin_user_tel }}</td>
         <td align="center" valign="middle" class="borderbottom">
-          <a href="admin_del?home_user_id=<?= $v->home_user_id?>" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+          <a href="#" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
       </tr>
       @endforeach
     </table></td>
     </tr>
-  <tr>
-    <td align="left" valign="top" class="fenye">11 条数据 1/1 页&nbsp;&nbsp;<a href="#" target="mainFrame" onFocus="this.blur()">首页</a>&nbsp;&nbsp;<a href="#" target="mainFrame" onFocus="this.blur()">上一页</a>&nbsp;&nbsp;<a href="#" target="mainFrame" onFocus="this.blur()">下一页</a>&nbsp;&nbsp;<a href="#" target="mainFrame" onFocus="this.blur()">尾页</a></td>
-  </tr>
+  {{--<tr>--}}
+    {{--<td align="left" valign="top" class="fenye">11 条数据 1/1 页&nbsp;&nbsp;<a href="#" target="mainFrame" onFocus="this.blur()">首页</a>&nbsp;&nbsp;<a href="#" target="mainFrame" onFocus="this.blur()">上一页</a>&nbsp;&nbsp;<a href="#" target="mainFrame" onFocus="this.blur()">下一页</a>&nbsp;&nbsp;<a href="#" target="mainFrame" onFocus="this.blur()">尾页</a></td>--}}
+  {{--</tr>--}}
 </table>
 </body>
 </html>
