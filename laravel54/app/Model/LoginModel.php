@@ -36,9 +36,5 @@ class LoginModel extends Model
         return  DB::table("$table")->where($where,$data)->first();
 
     }
-     public function show_a(){
-   
-          return DB::table($this->tableName)->get();
-    }
 }
 ?>

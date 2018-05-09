@@ -6,13 +6,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 use App\Model\OrderModel; 
+use Symfony\Component\HttpFoundation\Session\Session;
+
 
 
 class OrderController extends Controller  
 {  
 	 public function order()
    {
-      $admin_user_id   = 1;
+      $session         = new Session();
+      $admin_user_id   = $session->get("admin_user_id");
       if(empty($admin_user_id))
       {
           echo '<script>alert("请先登录");location.href="'.'login'.'";</script>';die;

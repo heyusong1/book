@@ -47,24 +47,24 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
   </tr>
   <tr>
     <td align="left" valign="top">
-      <form method="post" name="form1" onsubmit="return checkreg()" action="change_one">
+    <form method="post" action="">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">原来密码：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="password" name="home_user_password" value="" class="text-word">
+        <input type="text" name="" value="" class="text-word">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">修改密码：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="password" name="home_user_password1" id="Pwd" value="" class="text-word">
+        <input type="text" name="" value="" class="text-word">
         </td>
       
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">确认密码：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="password" name="pwd" id="Pwdagain" value="" class="text-word">
+        <input type="text" name="" value="" class="text-word">
         </td>
       </tr>
       
@@ -81,22 +81,3 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 </table>
 </body>
 </html>
-<script language="JavaScript">
-    function checkreg() {
-        if (document.form1.Pwd.value == "") {
-            alert("请输入密码!");
-            form1.Pwd.focus();
-            return false;
-        }
-        if (document.form1.Pwd.value.length < 6 || document.form1.Pwd.value.length > 15) {
-            alert("密码长度限制在6-15位!");
-            form1.Pwd.focus();
-            return false;
-        }
-        if (document.form1.Pwd.value != document.form1.Pwdagain.value) {
-            alert("两次输入的密码不同!")
-            form1.Pwd.focus();
-            return false;
-        }
-    }
-</script>

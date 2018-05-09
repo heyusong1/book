@@ -54,7 +54,7 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 
 	         </form>
          </td>
-  		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">个人中心</a></td>
+  		  <td width="10%" align="center" valign="middle" style="text-align:right; width:150px;"><a href="adminuser"  class="add" style="font-size: 16px; color: red;"><strong>个人中心</strong></a></td>
   		</tr>
 	</table>
     </td>
@@ -95,12 +95,7 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
     </table></td>
     </tr>
   <tr>
-    <td align="left" valign="top" class="fenye">{{$data['num']}} 条数据 1/1 页&nbsp;&nbsp;
-      <a href="adminindex?page=1&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >首页</a>&nbsp;&nbsp;
-      <a href="adminindex?page=<?= $data['up']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >上一页</a>&nbsp;&nbsp;
-      <a href="adminindex?page=<?= $data['next']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>">下一页</a>&nbsp;&nbsp;
-      <a href="adminindex?page=<?= $data['num_page']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >尾页</a>
-    </td>
+    <td align="left" valign="top" class="fenye">{{$data['num']}} 条数据 1/1 页&nbsp;&nbsp;<a href="adminindex?page=1&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >首页</a>&nbsp;&nbsp;<a href="adminindex?page=<?= $data['up']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >上一页</a>&nbsp;&nbsp;<a href="adminindex?page=<?= $data['next']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>">下一页</a>&nbsp;&nbsp;<a href="adminindex?page=<?= $data['num_page']?>&book_message_name=<?= $book_message_name?>&book_type_id=<?= $book_type_id?>"  >尾页</a></td>
   </tr>
 </table>
 </center>

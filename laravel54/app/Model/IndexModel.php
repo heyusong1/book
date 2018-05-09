@@ -60,6 +60,10 @@ class IndexModel extends Model
 		
     	
     }
+    public function select_user($admin_user_id)
+    {
+        return DB::table("admin_user")->where("admin_user_id",$admin_user_id)->first();
+    }
 
 }
 ?>
