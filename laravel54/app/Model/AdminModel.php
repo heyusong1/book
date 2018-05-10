@@ -10,6 +10,205 @@ class AdminModel extends Model
 {
     protected $tableName = 'home_user';
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function insert($input)
     {
         //添加数据
@@ -43,11 +242,11 @@ class AdminModel extends Model
         //查询所有数据
         return DB::table($this->tableName)->get();
     }
-    public function show_one($home_user_id)
-    {
-        //查询所有数据
-        return DB::table($this->tableName)->where(['home_user_id'=>$home_user_id])->first();
-    }
+    // public function show_one($home_user_id)
+    // {
+    //     //查询所有数据
+    //     return DB::table($this->tableName)->where(['home_user_id'=>$home_user_id])->first();
+    // }
     public function update_one($home_user_id)
     {
         $row=DB::table($this->tableName)->where(['home_user_id'=>$home_user_id])->first();
@@ -78,17 +277,6 @@ class AdminModel extends Model
         $data['home_user_img']=$post['home_user_img'];
         $data['home_user_email']=$post['home_user_email'];
         $data['home_user_matt']=$post['home_user_matt'];
-        return DB::table($this->tableName)->where(['home_user_id'=>$home_user_id])->update($data);
-    }
-
-    public function show_pwd($home_user_id)
-    {
-        return DB::table($this->tableName)->where(['home_user_id'=>$home_user_id])->first();
-    }
-
-    public function   update_pwd($home_user_id,$post)
-    {
-        $data['home_user_password']=$post;
         return DB::table($this->tableName)->where(['home_user_id'=>$home_user_id])->update($data);
     }
 

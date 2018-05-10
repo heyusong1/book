@@ -16,19 +16,156 @@ Route::get('/', function () {
 });
 
 
-Route::post('/page', 'PostController@store');
-Route::get('reg', 'RegController@index');
-Route::get('/login', 'admin\LoginController@login');
-Route::get('/validation', 'admin\LoginController@validation');
-Route::post('/add_user', 'admin\LoginController@add_user');
-Route::get('/homeindex', 'home\IndexController@index');
-Route::get('/hometop', 'home\IndexController@top');
-Route::get('/homeleft', 'home\IndexController@left');
-Route::get('/homeswich', 'home\IndexController@swich');
-Route::get('/adminindex', 'admin\IndexController@index');
-Route::get('/homemain', 'home\IndexController@main_info');
-Route::get('/homebottom', 'home\IndexController@bottom');
+
 // Route::get('/homelogin', 'home\IndexController@');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -49,6 +186,17 @@ Route::any('/update_user_one', 'home\AdminController@user_update_one');
 Route::any('/adminorder', 'admin\OrderController@order');
 Route::any('/user_insert', 'admin\LoginController@insert_user');
 Route::any('/login_user', 'admin\LoginController@login_one');
+Route::get('/hometop', 'home\IndexController@top');
+Route::get('/homebottom', 'home\IndexController@bottom');
+Route::get('/homemain', 'home\IndexController@main_info');
+Route::get('/adminindex', 'admin\IndexController@index');
+Route::get('/homeleft', 'home\IndexController@left');
+Route::post('/add_user', 'admin\LoginController@add_user');
+Route::get('/validation', 'admin\LoginController@validation');
+Route::post('/page', 'PostController@store');
+Route::get('reg', 'RegController@index');
+Route::get('/login', 'admin\LoginController@login');
+Route::get('/homeindex', 'home\IndexController@index');
 
 
 

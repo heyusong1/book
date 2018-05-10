@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\admin;  
   
 use App\Http\Controllers\Controller; 
-use App\Model\LoginModel;
-use App\Model\AdminModel;
+use App\Model\LoginModel; 
+use App\Model\AdminModel; 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Symfony\Component\HttpFoundation\Session\Session;
@@ -46,6 +46,10 @@ class LoginController extends Controller
         }
    		
    }
+    public function homeindex_one()
+    {
+        return view("home/login");
+    }
    public function add_user()
    {
       echo 111;die;
@@ -66,6 +70,221 @@ class LoginController extends Controller
 
         return $messdata;
    }
+ public function user_show_a()
+   {
+        $data=$this->Login->show_a();
+        $data=json_decode($data);
+        // var_dump($data);die;
+        return view('home/user_show',['data'=>$data]);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function login_insert(){
+ 
+       
+        $this->Admin=new AdminModel();
+        $home_user_name=Input::get('home_user_name');
+        $home_user_password=Input::get('home_user_password');
+        $home_user_password=md5($home_user_password);
+        $reg=$this->Admin->one_login($home_user_name,$home_user_password);
+        if ($reg)
+        {
+            $session = new Session();
+            $session->set("home_user_id",$reg->home_user_id);
+            echo '<script>alert("登录成功");location.href="'.'homeindex'.'";</script>';
+        }
+        else{
+            echo '<script>alert("用户名或密码错误");location.href="'.'loginone'.'";</script>';
+        }
+    }
+    public function login_one()
+   {
+
+       $admin_user_name=Input::get('admin_user_name');
+
+       $admin_user_pwd=Input::get('admin_user_pwd');
+       $admin_user_pwd=md5($admin_user_pwd);
+       $reg=$this->Login->login($admin_user_name,$admin_user_pwd);
+           if ($reg)
+           {
+               echo '<script>alert("登录成功");location.href="'.'adminindex'.'";</script>';
+           }
+           else{
+               echo '<script>alert("用户名或密码错误");location.href="'.'login'.'";</script>';
+           }
+   }
+
+
    public function insert_user()
    {
        $data = Input::all();
@@ -94,50 +313,6 @@ class LoginController extends Controller
            echo '<script>alert("注册失败");location.href="'.'login'.'";</script>';
        }
    }
-   public function login_one()
-   {
-       $admin_user_name=Input::get('admin_user_name');
-       $admin_user_pwd=Input::get('admin_user_pwd');
-       $admin_user_pwd=md5($admin_user_pwd);
-       $reg=$this->Login->login($admin_user_name,$admin_user_pwd);
-           if ($reg)
-           {
-               echo '<script>alert("登录成功");location.href="'.'adminindex'.'";</script>';
-           }
-           else{
-               echo '<script>alert("用户名或密码错误");location.href="'.'login'.'";</script>';
-           }
-   }
-    public function homeindex_one()
-    {
-        return view("home/login");
-    }
-   public function user_show_a()
-   {
-        $data=$this->Login->show_a();
-        $data=json_decode($data);
-        // var_dump($data);die;
-        return view('home/user_show',['data'=>$data]);
-    }
-    public function login_insert(){
-
-        $this->Admin=new AdminModel();
-        $home_user_name=Input::get('home_user_name');
-        $home_user_password=Input::get('home_user_password');
-        $home_user_password=md5($home_user_password);
-        $reg=$this->Admin->one_login($home_user_name,$home_user_password);
-        if ($reg)
-        {
-            $session = new Session();
-            $session->set("home_user_id",$reg->home_user_id);
-            echo '<script>alert("登录成功");location.href="'.'homeindex'.'";</script>';
-        }
-        else{
-            echo '<script>alert("用户名或密码错误");location.href="'.'loginone'.'";</script>';
-        }
-    }
-
-
-
-
+   
+  
 }  
