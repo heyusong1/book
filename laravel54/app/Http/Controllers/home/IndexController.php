@@ -3,20 +3,18 @@
 namespace App\Http\Controllers\home;  
   
 use App\Http\Controllers\Controller; 
-// use App\Model\LoginModel; 
+use App\Model\AdminModel; 
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 
   
 class IndexController extends Controller  
 {  
-<<<<<<< HEAD
-=======
     public $Admin;
     public function __construct(){
         $this->Admin=new AdminModel();// 实例化model
     }
->>>>>>> 6549cf411779661e1cb291ffcbd1c4b6d321a13e
-	   public function index()
+       public function index()
      {
         return view("home/index");
      }
@@ -28,7 +26,10 @@ class IndexController extends Controller
      //左部
      public function left()
      {
-        return view("home/left");
+      $Session=new Session();
+      $id=$Session->get('home_user_id');
+      $data=$this->Admin->img($id);
+       return view("home/left",['data'=>$data]);
      }
      //推送菜单
      public function swich()
@@ -54,3 +55,4 @@ class IndexController extends Controller
         return view("home/main",['data'=>$data]);
     }
 }  
+6

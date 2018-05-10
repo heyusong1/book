@@ -46,11 +46,7 @@ body{overflow-x:hidden; background:url({{ asset('home/images/main/leftbg.jpg') }
       </div>
        <div>
         <span>系统设置</span>
-<<<<<<< HEAD
         <a href="main_list.html" target="mainFrame" onFocus="this.blur()">级别权限</a>
-=======
-        <a href="homeone" target="mainFrame" onFocus="this.blur()">系统配置</a>
->>>>>>> 6549cf411779661e1cb291ffcbd1c4b6d321a13e
       </div>
     </div>
 </body>

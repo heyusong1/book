@@ -5,6 +5,7 @@ namespace App\Http\Controllers\home;
 use App\Http\Controllers\Controller; 
 use App\Model\AdminModel;
 use Illuminate\Support\Facades\Input;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 
 class AdminController extends Controller  
@@ -14,7 +15,7 @@ class AdminController extends Controller
         $this->Admin=new AdminModel();// 实例化model
     }
     //管理员添加
-	public function admin_insert_user()
+    public function admin_insert_user()
      {
         return view("home/main_info");
      }
@@ -36,39 +37,17 @@ class AdminController extends Controller
      }
     public function user_show_one()
     {
-        $data=$this->Admin->show_one();
+         $home_user_id = Input::get('home_user_id');
+        $data=$this->Admin->show_one($home_user_id);
         return view("home/main_show",['data'=>$data]);
     }
-<<<<<<< HEAD
-       public function admin_change_password()
-     {
-        return view("home/main_change");
-     }
-       public function main_list()
-     {
-        return view("home/main_list");
-     }
-     public function main_menu()
-     {
-        return view("home/main_menu");
-     }
-      public function main()
-     {
-        return view("home/main");
-     }
-=======
 //管理员信息
->>>>>>> 6549cf411779661e1cb291ffcbd1c4b6d321a13e
      public function user_update_one()
      {
          $home_user_id = Input::get('home_user_id');
          $row=$this->Admin->update_one($home_user_id);
          return view("home/main_show_update",['row'=>$row]);
      }
-<<<<<<< HEAD
-     
-   
-=======
 //管理员删除
     public function admin_delect()
     {
@@ -135,5 +114,4 @@ class AdminController extends Controller
 
     }
 
->>>>>>> 6549cf411779661e1cb291ffcbd1c4b6d321a13e
 }

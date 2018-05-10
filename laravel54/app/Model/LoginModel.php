@@ -13,12 +13,9 @@ class LoginModel extends Model
     // {
     //     return DB::table('lianxi0609')->get();
     // }
-<<<<<<< HEAD
-=======
 
 
     
->>>>>>> 6549cf411779661e1cb291ffcbd1c4b6d321a13e
 //查询单条数据
     public function select_one($table,$where,$data)
     {
@@ -45,13 +42,10 @@ class LoginModel extends Model
         return  DB::table("$table")->where($where,$data)->first();
 
     }
-<<<<<<< HEAD
-=======
     //用户展示
      public function show_a(){
    
           return DB::table($this->tableName)->get();
     }
->>>>>>> 6549cf411779661e1cb291ffcbd1c4b6d321a13e
 }
 ?>

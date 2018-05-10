@@ -9,11 +9,7 @@ use Illuminate\Support\Facades\Storage;//文件上传
 class AdminModel extends Model
 {
     protected $tableName = 'home_user';
-<<<<<<< HEAD
-
-=======
     //管理员添加
->>>>>>> 6549cf411779661e1cb291ffcbd1c4b6d321a13e
     public function insert($input)
     {
         //添加数据
@@ -49,18 +45,6 @@ class AdminModel extends Model
         //查询所有数据
         return DB::table($this->tableName)->get();
     }
-<<<<<<< HEAD
-    public function show_one()
-    {
-        //查询所有数据
-        return DB::table($this->tableName)->get();
-    }
-    public function update_one($home_user_id)
-    {
-        $row=DB::table($this->tableName)->where(['home_user_id'=>$home_user_id])->first();
-        return $row;
-    }
-=======
   
     public function update_one($home_user_id)
     {
@@ -94,7 +78,6 @@ class AdminModel extends Model
     {
         return DB::table($this->tableName)->where('home_user_id',$home_user_id)->first();
     }
->>>>>>> 6549cf411779661e1cb291ffcbd1c4b6d321a13e
 
 
 }
