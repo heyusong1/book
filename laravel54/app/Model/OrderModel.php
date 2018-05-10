@@ -13,6 +13,10 @@ class OrderModel extends Model
     // {
     //     return DB::table('lianxi0609')->get();
     // }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6549cf411779661e1cb291ffcbd1c4b6d321a13e
     //查询书籍是否存在
     public function select_one_book($book_message_id)
     {
