@@ -1,7 +1,7 @@
   <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>展示个人信息</title>
+<title>修改个人信息</title>
 <link href="css/css.css" type="text/css" rel="stylesheet" />
 <link href="css/main.css" type="text/css" rel="stylesheet" />
 <link rel="shortcut icon" href="images/main/favicon.ico" />
@@ -48,12 +48,13 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
   </tr>
   <tr>
     <td align="left" valign="top">
+      <form action="updateuser_do" method="post">
       <table width="100%"  border="0" id="main-tab" cellpadding="0" cellspacing="0"  align="center">
         <input type="hidden" name="_token" value="{{csrf_token()}}">
         <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">用户名：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="search" name="user_info_email" disabled="disabled" value="{{$userdata['0']->admin_user_name}}" id="User" class="text-word">
+        <input type="search" name="user_info_email"  disabled="disabled" value="{{$userdata['0']->admin_user_name}}" id="User" class="text-word">
         </td>
         </tr>
         <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
@@ -65,36 +66,34 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
         <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">邮箱：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="search" name="user_info_email" disabled="disabled" value="{{$userdata['0']->user_info_email}}" id="User" class="text-word">
+        <input type="search" name="user_info_email"  value="{{$userdata['0']->user_info_email}}" id="User" class="text-word">
         </td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">住址：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="user_info_site" disabled="disabled" id="Pwd" value="{{$userdata['0']->user_info_site}}"  class="text-word">
+        <input type="text" name="user_info_site"  id="Pwd" value="{{$userdata['0']->user_info_site}}"  class="text-word">
         </td>
         </tr>
        <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">性别：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="user_info_site" id="" disabled="disabled" value="@if ($userdata['0']->user_info_sex==1)男@elseif ($userdata['0']->user_info_sex==2)女 @endif" class="text-word"></td></tr>
+        <td align="left" valign="middle" class="">
+        <input type="radio" name="user_info_sex" value="1" @if ($userdata['0']->user_info_sex == 1) checked @endif id="" class="text-word">男
+        <input type="radio" name="user_info_sex" value="2"  @if ($userdata['0']->user_info_sex == 2) checked @endif id="" class="text-word">女
+        </td></tr>
          <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">身份证：</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="user_info_id_card" disabled="disabled" value="{{$userdata['0']->user_info_id_card}}"  class="text-word">
-        </td>
-         <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">个人钱包</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="user_info_id_card" disabled="disabled" value="{{$userdata['0']->user_info_money}}"  class="text-word">
+        <input type="text" name="user_info_id_card"  value="{{$userdata['0']->user_info_id_card}}"  class="text-word">
         </td>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input name="" type="button" value="修改" onclick="dian()" class="text-but">
-        <input name="" type="reset" value="重置" class="text-but"></td>
+        <input name="" type="submit" value="修改"  class="text-but">
+        <input name="" type="button" value="返回" onclick="dian()"  class="text-but"></td>
         </tr>
     </table>
+    </form>
     </td>
     </tr>
 </table>
@@ -104,7 +103,7 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 <script type="text/javascript">
   function dian()
   {
-    location.href='updateuser';
+    location.href='adminuser';
   }
 </script>
 

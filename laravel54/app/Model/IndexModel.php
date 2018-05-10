@@ -12,93 +12,6 @@ class IndexModel extends Model
     // {
     //     return DB::table('lianxi0609')->get();
     // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 //查询单条数据
     public function select_booktype()
     {
@@ -146,6 +59,10 @@ class IndexModel extends Model
     	}
 		
     	
+    }
+    public function select_user($admin_user_id)
+    {
+        return DB::table("admin_user")->where("admin_user_id",$admin_user_id)->first();
     }
 
 }
