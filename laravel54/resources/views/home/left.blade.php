@@ -37,7 +37,7 @@ body{overflow-x:hidden; background:url({{ asset('home/images/main/leftbg.jpg') }
       </div>
        <div>
         <span>系统设置</span>
-        <a href="" target="mainFrame" onFocus="this.blur()">系统配置</a>
+        <a href="homeone" target="mainFrame" onFocus="this.blur()">系统配置</a>
       </div>
     </div>
 </body>

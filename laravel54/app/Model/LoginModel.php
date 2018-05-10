@@ -15,160 +15,6 @@ class LoginModel extends Model
     // }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
 //查询单条数据
     public function select_one($table,$where,$data)
@@ -176,6 +22,7 @@ class LoginModel extends Model
         return  DB::table("$table")->where($where,$data)->first();
 
     }
+    //登录注册
     public function insert($input)
     {
         $data['admin_user_name'] = $input['admin_user_name'];
@@ -183,16 +30,19 @@ class LoginModel extends Model
         $data['admin_user_tel'] = $input['admin_user_tel'];
         return DB::table($this->tableName)->insert($data);
     }
+    //用户登录
     public function login($admin_user_name,$admin_user_pwd)
     {
 
         return DB::table($this->tableName)->where('admin_user_name',$admin_user_name)->where("admin_user_pwd",$admin_user_pwd)->first();
     }
+    //用户查询
     public function select_name($table,$where,$data)
     {
         return  DB::table("$table")->where($where,$data)->first();
 
     }
+    //用户展示
      public function show_a(){
    
           return DB::table($this->tableName)->get();

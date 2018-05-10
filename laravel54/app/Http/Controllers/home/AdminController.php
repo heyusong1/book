@@ -14,278 +14,11 @@ class AdminController extends Controller
     public function __construct(){
         $this->Admin=new AdminModel();// 实例化model
     }
+    //管理员添加
 	public function admin_insert_user()
      {
         return view("home/main_info");
      }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
     public function  insert_user()
     {
         $data = Input::all();
@@ -296,6 +29,7 @@ class AdminController extends Controller
             echo '<script>alert("添加成功");location.href="'.'home_show_admin'.'";</script>';
         }
     }
+    //管理员展示
        public function admin_show_user()
      {
          $data=$this->Admin->show();
@@ -307,24 +41,14 @@ class AdminController extends Controller
         $data=$this->Admin->show_one($home_user_id);
         return view("home/main_show",['data'=>$data]);
     }
-
-       public function main_list()
-     {
-        return view("home/main_list");
-     }
-
+//管理员信息
      public function user_update_one()
      {
          $home_user_id = Input::get('home_user_id');
          $row=$this->Admin->update_one($home_user_id);
          return view("home/main_show_update",['row'=>$row]);
      }
-    public function user_insert_one()
-    {
-        return view("home/user_insert");
-    }
-
-
+//管理员删除
     public function admin_delect()
     {
         $home_user_id = Input::get('home_user_id');
@@ -338,24 +62,18 @@ class AdminController extends Controller
             echo '<script>alert("删除失败");location.href="'.'home_show_admin'.'";</script>';
         }
     }
+
       public function updates(){
         $home_user_id = Input::get('home_user_id');
         $data=$this->Admin->getRow($home_user_id);
         return view('home/main_show',['data'=>$data]);
     }
-    public function upd(){
-        $post = Input::all();
-        $res=$this->reg->saveRow($post);
-        if($res){
-            echo '<script>alert("修改成功");location.href="'.'show'.'";</script>';
-        }
-
-    }
-
+    //用户展示
       public function user_show_a()
     {
         return view("home/user_show");
     }
+    //管理员修改密码
     public function admin_change_password()
     {
         return view("home/main_change");
