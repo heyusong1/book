@@ -48,10 +48,10 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
    @foreach ($data as $k => $v)
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="center" valign="middle" class="borderright borderbottom">{{ $v->admin_user_id }}</td>
-        <td align="center" valign="middle" class="borderright borderbottom"><a href="#" target="mainFrame" onFocus="this.blur()">{{ $v->admin_user_name }}</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom">{{ $v->admin_user_name }}</a></td>
         <td align="center" valign="middle" class="borderright borderbottom">{{ $v->admin_user_tel }}</td>
         <td align="center" valign="middle" class="borderbottom">
-          <a href="#" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+          <a href="user_xiangqing" target="mainFrame" onFocus="this.blur()" class="add">详情</a></td>
       </tr>
       @endforeach
     </table></td>

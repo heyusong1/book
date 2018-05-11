@@ -22,7 +22,9 @@ body{overflow-x:hidden; background:url({{ asset('home/images/main/leftbg.jpg') }
 <body onselectstart="return false;" ondragstart="return false;" oncontextmenu="return false;">
 <div id="left-top">
 	<div><img width="48px;" height="48px;" src="{{$data->home_user_img}}"></div>
-    <span>用户:{{$data->home_user_name}}<br>角色:{{$data->home_user_state}}</span>
+    <span>用户:{{$data->home_user_name}}<br>角色:@if($data->home_user_state==1)
+    超级管理员 @else 普通管理员 @endif
+</span>
 </div>
     <div style="float: left" id="my_menu" class="sdmenu">
       <div class="collapsed">

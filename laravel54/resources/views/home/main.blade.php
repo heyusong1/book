@@ -26,7 +26,8 @@ div.main-order{ line-height:30px; padding:10px 0 0 0;}
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="main">
   <tr>
     <td colspan="2" align="left" valign="top">
-    <span class="time"><strong>您好！{{$data->home_user_name}}</strong><u>[{{$data->home_user_state}}]</u></span>
+    <span class="time"><strong>您好！{{$data->home_user_name}}</strong><u>[@if($data->home_user_state==1)
+    超级管理员 @else 普通管理员 @endif]</u></span>
     <div class="top"><span class="left">您上次的登灵时间：2012-05-03  12:00   登录IP：127.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;如非您本人操作，请及时</span><a href="home_change_password" target="mainFrame" onFocus="this.blur()">更改密码</a></div>
     </td>
   </tr>
@@ -36,8 +37,8 @@ div.main-order{ line-height:30px; padding:10px 0 0 0;}
     <div class="main-con">
     会员注册：开启<br/>
     会员投稿：开启<br/>
-    管理员个数：<font color="#538ec6"><strong>6</strong></font> 人<br/>
-    登陆者IP：192.168.1.156<br/>
+    管理员个数：<font color="#538ec6"><strong>保密</strong></font> 人<br/>
+    登陆者IP：<?= $_SERVER['REMOTE_ADDR']?><br/>
     程序编码：UTF-8<br/>
     </div>
     </td>
@@ -48,7 +49,7 @@ div.main-order{ line-height:30px; padding:10px 0 0 0;}
     PHP版本：5.2.5<br/>
     MYSQL版本：5.0.45-community-nt<br/>
     魔术引用：开启 (建议开启)<br/>
-    使用域名：192.168.1.124 <br/>
+    使用域名：<?= $_SERVER['REMOTE_ADDR']?><br/>
     </div>
     </td>
   </tr>

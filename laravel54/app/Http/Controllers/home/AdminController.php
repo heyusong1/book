@@ -113,5 +113,11 @@ class AdminController extends Controller
 
 
     }
+     public function show_one_user()
+    {
+         $user_show_id = Input::get('user_show_id');
+        $data=$this->Admin->user_show($user_info_id);
+        return view("home/user_shwo_one",['data'=>$data]);
+    }
 
 }

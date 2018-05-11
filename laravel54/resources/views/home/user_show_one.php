@@ -36,16 +36,15 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 </head>
 <body>
 <!--main_top-->
-    <form action="upd" method="post">
-    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>"> 
-    <input type="hidden" name="home_user_id" value="<?= $data->home_user_id ?>"> 
+    
+      <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>"> 
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
     <td width="99%" align="left" valign="top">您的位置：留言板&nbsp;&nbsp;>&nbsp;&nbsp;留言内容</td>
   </tr>
   <tr>
     <td align="left" valign="top" id="addinfo">
-    <a href="home_show_admin" target="mainFrame" onFocus="this.blur()" class="add">返回上一级</a>
+    <a href="user_one_show" target="mainFrame" onFocus="this.blur()" class="add">返回上一级</a>
     </td>
   </tr>
   <tr>
@@ -53,29 +52,30 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
 
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">管理员姓名：</td>
-        <td align="left" valign="<?= $data->home_user_name ?>" class="borderright borderbottom main-for">{{ $data->home_user_name }}</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">用户卡号：</td>
+        <td align="left" valign="" class="borderright borderbottom main-for"><?php echo $data->user_info_id_card ?></td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">头像：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for"><img width="100px;" height="100px;" src="{{$data->home_user_img}}"></td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">用户地址：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">
+          <?php echo $data->user_info_site ?></td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">管理员Email：</td>
-        <td align="left" valign="<?= $data->home_user_email ?>"  class="borderright borderbottom main-for">{{ $data->home_user_email }} </td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">用户性别：</td>
+        <td align="left" valign=""  class="borderright borderbottom main-for">@if($data->user_info_sex == 1 )男 @else 女 @ifend  </td>
+      </tr>
+       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
+        <td align="right" valign="middle" class="borderright borderbottom bggray">用户余额：</td>
+        <td align="left" valign=""  class="borderright borderbottom main-for">{{ $data->user_info_moeny}}</td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">管理员权限：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">{{ $data->home_user_state }}</td>
+        <td align="right" valign="middle" class="borderright borderbottom bggray">用户身份证：</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">{{$data->user_info_id_card}}</td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">管理员简介：</td>
-        <td align="left" valign="<?= $data->home_user_matt?>" class="borderright borderbottom main-for" style="line-height:24px;">{{ $data->home_user_matt }}</td>
-      </tr>
-      <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        
-      </tr>
-     
+        <td align="right" valign="middle" class="borderright borderbottom bggray">用户email：</td>
+        <td align="left" valign="" class="borderright borderbottom main-for" style="line-height:24px;">{{$data->user_info_email}}</td>
+      </tr> 
     </table>
 </form>
     </td>

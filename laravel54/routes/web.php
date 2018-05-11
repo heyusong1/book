@@ -48,6 +48,9 @@ Route::get('reg', 'RegController@index');
 Route::get('/login', 'admin\LoginController@login');
 Route::get('/homeindex', 'home\IndexController@index');
 Route::get('/homeone', 'home\IndexController@one');
+Route::any('/user_xiangqing', 'admin\LoginController@user_a_show');
+
+
 
 
 

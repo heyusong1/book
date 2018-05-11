@@ -35,7 +35,7 @@ class AdminModel extends Model
             $filename = uniqid() . '.' . $ext;
             //  print_r($filename);die;
             $bool = Storage::disk('uploads')->put($filename, file_get_contents($realPath));
-            $path = "../uploads/" . $filename;
+            $path = "../public/uploads/" . $filename;
         }
         return $path;
     }
@@ -77,6 +77,11 @@ class AdminModel extends Model
     public function admin_one($home_user_id)  
     {
         return DB::table($this->tableName)->where('home_user_id',$home_user_id)->first();
+    }
+     public function user_show($user_show_id){
+        //查询一条数据
+        $row=DB::table($this->tableName)->where('user_show_id',$user_show_id)->first();
+        return $row;
     }
 
 
