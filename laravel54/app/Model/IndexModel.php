@@ -12,11 +12,15 @@ class IndexModel extends Model
     // {
     //     return DB::table('lianxi0609')->get();
     // }
+
+
+    
 //查询单条数据
     public function select_booktype()
     {
         return DB::table("book_type")->get();
     }
+    //图书查询
     public function select_count($book_message_name,$book_type_id){
     	if($book_message_name=="" && $book_type_id=="")
     	{
@@ -39,6 +43,7 @@ class IndexModel extends Model
     	}
 		
     }
+    //图书查询
     public function select_book($book_message_name,$book_type_id,$limit,$size)
     {
     	if($book_message_name=="" && $book_type_id=="")
@@ -59,10 +64,6 @@ class IndexModel extends Model
     	}
 		
     	
-    }
-    public function select_user($admin_user_id)
-    {
-        return DB::table("admin_user")->where("admin_user_id",$admin_user_id)->first();
     }
 
 }

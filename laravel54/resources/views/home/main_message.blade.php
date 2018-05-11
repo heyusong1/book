@@ -48,10 +48,10 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
       @foreach ($data as $k => $v)
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="center" valign="middle" class="borderright borderbottom">{{ $v->home_user_id }}</td>
-        <td align="center" valign="middle" class="borderright borderbottom"><a href="show_user_one" target="mainFrame" onFocus="this.blur()">{{ $v->home_user_name }}</a></td>
+        <td align="center" valign="middle" class="borderright borderbottom"><a href="updates_one?home_user_id=<?= $v->home_user_id ?>" target="mainFrame" onFocus="this.blur()">{{ $v->home_user_name }}</a></td>
         <td align="center" valign="middle" class="borderright borderbottom">{{ $v->home_user_state }}</td>
-        <td align="center" valign="middle" class="borderbottom"><a href="message_replay.html" target="mainFrame" onFocus="this.blur()" class="add">编辑</a>
-          <span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
+        <td align="center" valign="middle" class="borderbottom">
+          <a href="admin_del?home_user_id=<?= $v->home_user_id?>" target="mainFrame" onFocus="this.blur()" class="add">删除</a></td>
       </tr>
       @endforeach
     </table></td>

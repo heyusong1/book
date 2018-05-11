@@ -36,6 +36,9 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 </head>
 <body>
 <!--main_top-->
+    <form action="upd" method="post">
+    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>"> 
+    <input type="hidden" name="home_user_id" value="<?= $data->home_user_id ?>"> 
 <table width="99%" border="0" cellspacing="0" cellpadding="0" id="searchmain">
   <tr>
     <td width="99%" align="left" valign="top">您的位置：留言板&nbsp;&nbsp;>&nbsp;&nbsp;留言内容</td>
@@ -48,35 +51,33 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
   <tr>
     <td align="left" valign="top">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" id="main-tab">
-      @foreach ($data as $k => $v)
+
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">管理员姓名：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">{{ $v->home_user_name }}</td>
+        <td align="left" valign="<?= $data->home_user_name ?>" class="borderright borderbottom main-for">{{ $data->home_user_name }}</td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">头像：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for"><img width="100px;" height="100px;" src="{{$v->home_user_img}}"></td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for"><img width="100px;" height="100px;" src="{{$data->home_user_img}}"></td>
         </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">管理员Email：</td>
-        <td align="left" valign="middle"  class="borderright borderbottom main-for">{{ $v->home_user_email }}</td>
+        <td align="left" valign="<?= $data->home_user_email ?>"  class="borderright borderbottom main-for">{{ $data->home_user_email }} </td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">管理员权限：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">{{ $v->home_user_state }}</td>
+        <td align="left" valign="middle" class="borderright borderbottom main-for">{{ $data->home_user_state }}</td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">管理员简介：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for" style="line-height:24px;">{{ $v->home_user_matt }}</td>
+        <td align="left" valign="<?= $data->home_user_matt?>" class="borderright borderbottom main-for" style="line-height:24px;">{{ $data->home_user_matt }}</td>
       </tr>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">操作：</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-          <a href="update_user_one" target="mainFrame" onFocus="this.blur()" class="add">编辑</a><span class="gray">&nbsp;|&nbsp;</span>
-          <span class="gray">&nbsp;|&nbsp;</span><a href="add.html" target="mainFrame" onFocus="this.blur()" class="add">删除</a>
+        
       </tr>
-      @endforeach
+     
     </table>
+</form>
     </td>
     </tr>
 </table>

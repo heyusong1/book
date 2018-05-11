@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+// Route::get('/homelogin', 'home\IndexController@');
+
+
 Route::any('/loginone', 'admin\LoginController@homeindex_one');
 Route::any('/change_one', 'home\AdminController@admin_change_pwd');
 Route::any('/user_one_show', 'admin\LoginController@user_show_a');
@@ -52,58 +57,3 @@ Route::any('/user_xiangqing', 'admin\LoginController@user_a_show');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Route::get('/adminuser', 'admin\UserController@user');
-Route::get('/finishinfo', 'admin\UserController@finishinfo');
-Route::post('/adduserinfo', 'admin\UserController@adduserinfo');
-Route::any('/updateuser', 'admin\UserController@updateuser');
-Route::any('/updateuser_do', 'admin\UserController@updateuser_do');

@@ -118,10 +118,6 @@
             url:"{{url('validation')}}",
             data:{admin_user_tel:admin_user_tel},
             success:function(a){
-                 if(a==4)
-                {
-                    $(".phone_info").html("手机号错误");
-                }
                 if(a==1)
                 {
                     $(".phone_info").html("手机号已存在");

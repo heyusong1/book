@@ -14,7 +14,7 @@ class IndexController extends Controller
     public function __construct(){
         $this->Admin=new AdminModel();// 实例化model
     }
-       public function index()
+	   public function index()
      {
         return view("home/index");
      }
@@ -55,4 +55,3 @@ class IndexController extends Controller
         return view("home/main",['data'=>$data]);
     }
 }  
-6

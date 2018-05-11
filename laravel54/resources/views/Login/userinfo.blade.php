@@ -83,15 +83,10 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
         <td align="left" valign="middle" class="borderright borderbottom main-for">
         <input type="text" name="user_info_id_card" disabled="disabled" value="{{$userdata['0']->user_info_id_card}}"  class="text-word">
         </td>
-         <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
-        <td align="right" valign="middle" class="borderright borderbottom bggray">个人钱包</td>
-        <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input type="text" name="user_info_id_card" disabled="disabled" value="{{$userdata['0']->user_info_money}}"  class="text-word">
-        </td>
       <tr onMouseOut="this.style.backgroundColor='#ffffff'" onMouseOver="this.style.backgroundColor='#edf5ff'">
         <td align="right" valign="middle" class="borderright borderbottom bggray">&nbsp;</td>
         <td align="left" valign="middle" class="borderright borderbottom main-for">
-        <input name="" type="button" value="修改" onclick="dian()" class="text-but">
+        <input name="" type="submit" value="修改" class="text-but">
         <input name="" type="reset" value="重置" class="text-but"></td>
         </tr>
     </table>
@@ -101,10 +96,4 @@ td.fenye{ padding:10px 0 0 0; text-align:right;}
 </center>
 </body>
 </html>
-<script type="text/javascript">
-  function dian()
-  {
-    location.href='updateuser';
-  }
-</script>
 
