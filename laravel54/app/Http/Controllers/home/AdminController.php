@@ -15,7 +15,7 @@ class AdminController extends Controller
         $this->Admin=new AdminModel();// 实例化model
     }
     //管理员添加
-	public function admin_insert_user()
+    public function admin_insert_user()
      {
         return view("home/main_info");
      }
